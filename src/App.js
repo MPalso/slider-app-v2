@@ -2,7 +2,7 @@ import OneMovieSlider from "./components/OneMovieSlider"
 
 const App = () => {
   return (
-    <div>
+    <div className="slider">
       <OneMovieSlider />
     </div>
   )
