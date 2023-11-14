@@ -15,6 +15,17 @@ const OneMovieSlider = () => {
             }
         }, [index])
 
+
+        // Automaticke posuvanie
+        useEffect ( () => {
+            let setIntervalID = setInterval( () => {
+
+                setIndex(index + 1)
+
+            }, 3000)
+            return () => clearInterval(setIntervalID)
+        }, [index])
+
     return <section className="all-movies">    
         <div className="all-movies-content">
             {data.map( (oneMovie, oneMovieIndex) => {
